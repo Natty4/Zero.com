@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zero.com - Revolutionary Book Swapping Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-gradient"></div>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Glassmorphic Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">zero</div>
+            <div class="nav-links">
+                <a href="#explore" class="nav-link">Explore</a>
+                <a href="#swap" class="nav-link">Swap</a>
+                <a href="#community" class="nav-link">Community</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="btn-primary">Join Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Large Typography -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">SWAP</span>
+                    <span class="title-line">BOOKS</span>
+                    <span class="title-line highlight">FOR 25 BIRR</span>
+                </h1>
+                <p class="hero-subtitle">Africa's most innovative book exchange platform. Trade, discover, and connect with readers across the continent.</p>
+            </div>
+            
+            <!-- Floating Glass Cards -->
+            <div class="floating-cards">
+                <div class="glass-card card-1" data-tilt>
+                    <div class="card-icon">📚</div>
+                    <h3>10,000+</h3>
+                    <p>Books Available</p>
+                </div>
+                <div class="glass-card card-2" data-tilt>
+                    <div class="card-icon">🔄</div>
+                    <h3>5,000+</h3>
+                    <p>Swaps Completed</p>
+                </div>
+                <div class="glass-card card-3" data-tilt>
+                    <div class="card-icon">👥</div>
+                    <h3>2,500+</h3>
+                    <p>Active Members</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Bento Grid Section -->
+    <section class="bento-grid" id="explore">
+        <div class="bento-container">
+            <!-- Large Feature Card -->
+            <div class="bento-item large glass-card interactive" data-aos="fade-up">
+                <div class="bento-content">
+                    <span class="badge">Featured</span>
+                    <h2>Discover Your Next Great Read</h2>
+                    <p>Browse through thousands of books from every genre. From classics to contemporary bestsellers.</p>
+                    <button class="btn-secondary">Explore Library</button>
+                </div>
+                <div class="bento-visual">
+                    <div class="book-stack">
+                        <div class="book book-1"></div>
+                        <div class="book book-2"></div>
+                        <div class="book book-3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Swap Process Card -->
+            <div class="bento-item medium glass-card interactive" data-aos="fade-up" data-aos-delay="100">
+                <div class="swap-icon">🔄</div>
+                <h3>How Swapping Works</h3>
+                <div class="swap-steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p>Choose a book</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>Pay 25 Birr</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>Get your book</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Card -->
+            <div class="bento-item small glass-card interactive" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <h3 class="stat-number" data-count="25">0</h3>
+                    <p>Birr per swap</p>
+                </div>
+            </div>
+
+            <!-- Community Card -->
+            <div class="bento-item medium glass-card interactive" data-aos="fade-up" data-aos-delay="300">
+                <div class="community-preview">
+                    <h3>Join Our Community</h3>
+                    <div class="member-avatars">
+                        <div class="avatar">👤</div>
+                        <div class="avatar">👤</div>
+                        <div class="avatar">👤</div>
+                        <div class="avatar">+2.5K</div>
+                    </div>
+                    <p>Connect with book lovers across Africa</p>
+                    <button class="btn-outline">Join Now</button>
+                </div>
+            </div>
+
+            <!-- Eco-Friendly Card -->
+            <div class="bento-item small glass-card interactive" data-aos="fade-up" data-aos-delay="400">
+                <div class="eco-card">
+                    <div class="eco-icon">🌱</div>
+                    <h4>Eco-Friendly</h4>
+                    <p>Sustainable reading</p>
+                </div>
+            </div>
+
+            <!-- Book Showcase Card -->
+            <div class="bento-item large glass-card interactive" data-aos="fade-up" data-aos-delay="500">
+                <h3>Trending Books</h3>
+                <div class="book-grid" id="bookGrid">
+                    <!-- Books will be dynamically loaded -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Swap Section -->
+    <section class="swap-section" id="swap">
+        <div class="swap-container">
+            <div class="section-header">
+                <h2 class="section-title">Start Swapping Today</h2>
+                <p class="section-subtitle">Choose from our curated collection</p>
+            </div>
+            
+            <div class="filter-bar glass-card">
+                <button class="filter-btn active" data-filter="all">All Books</button>
+                <button class="filter-btn" data-filter="fiction">Fiction</button>
+                <button class="filter-btn" data-filter="non-fiction">Non-Fiction</button>
+                <button class="filter-btn" data-filter="classics">Classics</button>
+                <button class="filter-btn" data-filter="contemporary">Contemporary</button>
+            </div>
+
+            <div class="books-container" id="booksContainer">
+                <!-- Books will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content glass-card">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-btn" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically loaded -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">0 Birr</span>
+                </div>
+                <button class="btn-primary btn-full">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer glass-card">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>zero.com</h3>
+                <p>Africa's first hardcover book swapping platform</p>
+            </div>
+            <div class="footer-section">
+                <h4>Platform</h4>
+                <a href="#explore">Explore</a>
+                <a href="#swap">Swap Books</a>
+                <a href="#community">Community</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#terms">Terms</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 zero.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
