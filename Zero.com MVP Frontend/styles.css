@@ -733,19 +733,9 @@ body {
   border-color: var(--orange);
 }
 
-.book-cover img,
-.book-card-mini img,
-.cart-item-cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Ensures the image covers the area without distortion, cropping if necessary */
-    display: block;
-    border-radius: inherit; /* Inherit rounded corners from the parent div if set */
-}
-
 .book-cover {
   width: 100%;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 1;
   background: linear-gradient(135deg, var(--orange), #ff9d1a);
   border-radius: 10px;
   margin-bottom: 15px;
@@ -765,6 +755,22 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.2));
+}
+
+.book-cover-img {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--orange), #ff9d1a);
+}
+
+.book-cover-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .book-info h3 {
@@ -823,7 +829,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(9, 16, 33, 0.8);
   backdrop-filter: blur(10px);
   display: none;
   justify-content: center;
@@ -952,6 +958,267 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.zcoin-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 140, 0, 0.95);
+  backdrop-filter: blur(10px);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.zcoin-display {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: rgba(255, 140, 0, 0.2);
+  border: 1px solid rgba(255, 140, 0, 0.4);
+  border-radius: 10px;
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+}
+
+.zcoin-calculator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255, 140, 0, 0.1);
+  border: 1px solid rgba(255, 140, 0, 0.3);
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.zcoin-value {
+  color: var(--orange);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.zcoin-value span{
+  font-weight: bolder;
+  font-size: large;
+  color: goldenrod;
+}
+
+.zcoin-comparison {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.zcoin-badge-small {
+  display: inline-block;
+  background: rgba(255, 140, 0, 0.2);
+  color: var(--orange);
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 140, 0, 0.3);
+}
+
+.swap-details {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Shop Section */
+.shop-section {
+  padding: 100px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.shop-container {
+  width: 100%;
+}
+
+/* Swap Modal */
+.swap-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 16, 33, 0.8);
+  backdrop-filter: blur(10px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.swap-modal.active {
+  display: flex;
+}
+
+.swap-modal-content {
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 30px;
+}
+
+.swap-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.swap-modal-header h2 {
+  font-size: 32px;
+}
+
+.swap-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.swap-selection {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+}
+
+.swap-book-section {
+  flex: 1;
+}
+
+.swap-book-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--orange);
+}
+
+.selected-book-display {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 150px;
+}
+
+.selected-book-display .book-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.selected-book-display h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.selected-book-display p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.swap-arrow {
+  font-size: 48px;
+  color: var(--orange);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+.swap-input,
+.swap-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 12px 15px;
+  color: var(--white);
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.swap-input option {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.swap-input:focus,
+.swap-textarea:focus {
+  outline: none;
+  border-color: var(--orange);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.swap-textarea {
+  min-height: 80px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.swap-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.swap-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 140, 0, 0.1);
+  border: 1px solid rgba(255, 140, 0, 0.3);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.price-highlight {
+  color: var(--orange);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Transaction Type Badge Styles */
+.transaction-type {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.transaction-type.swap {
+  background: rgba(74, 144, 226, 0.2);
+  color: #5ba3f5;
+}
+
+.transaction-type.purchase {
+  background: rgba(255, 140, 0, 0.2);
+  color: var(--orange);
+}
+
 /* Footer */
 .footer {
   margin: 100px 20px 20px;
@@ -1057,6 +1324,15 @@ body {
 
   .book-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .swap-selection {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .swap-arrow {
+    transform: rotate(90deg);
   }
 }
 

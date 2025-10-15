@@ -15,13 +15,13 @@
         <div class="shape shape-3"></div>
     </div>
 
-    <!-- Glassmorphic Navigation -->
     <nav class="glass-nav">
         <div class="nav-container">
             <div class="logo">zero</div>
             <div class="nav-links">
                 <a href="#explore" class="nav-link">Explore</a>
-                <a href="#swap" class="nav-link">Swap</a>
+                <a href="#swap" class="nav-link">Swap Books</a>
+                <a href="#shop" class="nav-link">Shop New</a>
                 <a href="#community" class="nav-link">Community</a>
                 <a href="#about" class="nav-link">About</a>
             </div>
@@ -39,7 +39,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Large Typography -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
@@ -48,24 +47,23 @@
                     <span class="title-line">BOOKS</span>
                     <span class="title-line highlight">FOR 25 BIRR</span>
                 </h1>
-                <p class="hero-subtitle">Africa's most innovative book exchange platform. Trade, discover, and connect with readers across the continent.</p>
+                <p class="hero-subtitle">Africa's most innovative book exchange platform. Swap your books for 25 Birr or buy brand new books. Trade, discover, and connect with readers across the continent.</p>
             </div>
             
-            <!-- Floating Glass Cards -->
             <div class="floating-cards">
                 <div class="glass-card card-1" data-tilt>
                     <div class="card-icon">📚</div>
-                    <h3>10,000+</h3>
+                    <h3>1000+</h3>
                     <p>Books Available</p>
                 </div>
                 <div class="glass-card card-2" data-tilt>
                     <div class="card-icon">🔄</div>
-                    <h3>5,000+</h3>
+                    <h3>500+</h3>
                     <p>Swaps Completed</p>
                 </div>
                 <div class="glass-card card-3" data-tilt>
                     <div class="card-icon">👥</div>
-                    <h3>2,500+</h3>
+                    <h3>250+</h3>
                     <p>Active Members</p>
                 </div>
             </div>
@@ -76,10 +74,8 @@
         </div>
     </section>
 
-    <!-- Bento Grid Section -->
     <section class="bento-grid" id="explore">
         <div class="bento-container">
-            <!-- Large Feature Card -->
             <div class="bento-item large glass-card interactive" data-aos="fade-up">
                 <div class="bento-content">
                     <span class="badge">Featured</span>
@@ -96,7 +92,6 @@
                 </div>
             </div>
 
-            <!-- Swap Process Card -->
             <div class="bento-item medium glass-card interactive" data-aos="fade-up" data-aos-delay="100">
                 <div class="swap-icon">🔄</div>
                 <h3>How Swapping Works</h3>
@@ -116,7 +111,6 @@
                 </div>
             </div>
 
-            <!-- Stats Card -->
             <div class="bento-item small glass-card interactive" data-aos="fade-up" data-aos-delay="200">
                 <div class="stat-card">
                     <div class="stat-icon">💰</div>
@@ -125,7 +119,6 @@
                 </div>
             </div>
 
-            <!-- Community Card -->
             <div class="bento-item medium glass-card interactive" data-aos="fade-up" data-aos-delay="300">
                 <div class="community-preview">
                     <h3>Join Our Community</h3>
@@ -140,7 +133,6 @@
                 </div>
             </div>
 
-            <!-- Eco-Friendly Card -->
             <div class="bento-item small glass-card interactive" data-aos="fade-up" data-aos-delay="400">
                 <div class="eco-card">
                     <div class="eco-icon">🌱</div>
@@ -148,8 +140,6 @@
                     <p>Sustainable reading</p>
                 </div>
             </div>
-
-            <!-- Book Showcase Card -->
             <div class="bento-item large glass-card interactive" data-aos="fade-up" data-aos-delay="500">
                 <h3>Trending Books</h3>
                 <div class="book-grid" id="bookGrid">
@@ -159,29 +149,92 @@
         </div>
     </section>
 
-    <!-- Interactive Swap Section -->
     <section class="swap-section" id="swap">
         <div class="swap-container">
             <div class="section-header">
-                <h2 class="section-title">Start Swapping Today</h2>
-                <p class="section-subtitle">Choose from our curated collection</p>
+                <h2 class="section-title">Swap Your Books</h2>
+                <p class="section-subtitle">Trade your book for just 25 Birr - Choose from our available collection</p>
             </div>
             
             <div class="filter-bar glass-card">
-                <button class="filter-btn active" data-filter="all">All Books</button>
-                <button class="filter-btn" data-filter="fiction">Fiction</button>
-                <button class="filter-btn" data-filter="non-fiction">Non-Fiction</button>
-                <button class="filter-btn" data-filter="classics">Classics</button>
-                <button class="filter-btn" data-filter="contemporary">Contemporary</button>
+                <button class="filter-btn active" data-filter="all" data-section="swap">All Books</button>
+                <button class="filter-btn" data-filter="fiction" data-section="swap">Fiction</button>
+                <button class="filter-btn" data-filter="non-fiction" data-section="swap">Non-Fiction</button>
+                <button class="filter-btn" data-filter="classics" data-section="swap">Classics</button>
+                <button class="filter-btn" data-filter="contemporary" data-section="swap">Contemporary</button>
             </div>
 
-            <div class="books-container" id="booksContainer">
-                <!-- Books will be dynamically loaded -->
+            <div class="books-container" id="swapBooksContainer">
+                <!-- Swap books will be dynamically loaded -->
             </div>
         </div>
     </section>
 
-    <!-- Shopping Cart Modal -->
+    <section class="shop-section" id="shop">
+        <div class="shop-container">
+            <div class="section-header">
+                <h2 class="section-title">Shop New Books</h2>
+                <p class="section-subtitle">Browse and buy brand new books from our collection</p>
+            </div>
+            
+            <div class="filter-bar glass-card">
+                <button class="filter-btn active" data-filter="all" data-section="shop">All Books</button>
+                <button class="filter-btn" data-filter="fiction" data-section="shop">Fiction</button>
+                <button class="filter-btn" data-filter="non-fiction" data-section="shop">Non-Fiction</button>
+                <button class="filter-btn" data-filter="classics" data-section="shop">Classics</button>
+                <button class="filter-btn" data-filter="contemporary" data-section="shop">Contemporary</button>
+            </div>
+
+            <div class="books-container" id="shopBooksContainer">
+                <!-- New books will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <div class="swap-modal" id="swapModal">
+        <div class="swap-modal-content glass-card">
+            <div class="swap-modal-header">
+                <h2>Complete Your Swap</h2>
+                <button class="close-btn" id="closeSwap">&times;</button>
+            </div>
+            <div class="swap-modal-body">
+                <div class="swap-selection">
+                    <div class="swap-book-section">
+                        <h3>You're getting:</h3>
+                        <div id="selectedSwapBook" class="selected-book-display"></div>
+                    </div>
+                    <div class="swap-arrow">⇄</div>
+                    <div class="swap-book-section">
+                        <h3>Your book to trade:</h3>
+                        <input type="text" id="userBookTitle" placeholder="Enter your book title" class="swap-input">
+                        <input type="text" id="userBookAuthor" placeholder="Enter author name" class="swap-input">
+                        <select id="userBookCategory" class="swap-input">
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="classics">Classics</option>
+                            <option value="contemporary">Contemporary</option>
+                        </select>
+                        <select id="userBookCondition" class="swap-input">
+                            <option value="excellent">Excellent Condition</option>
+                            <option value="good" selected>Good Condition</option>
+                            <option value="fair">Fair Condition</option>
+                            <option value="poor">Poor Condition</option>
+                        </select>
+                        <div class="zcoin-calculator">
+                            <span>Your book's value:</span>
+                            <span class="zcoin-value" id="userZcoinValue">55 <span>Ⓩ</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swap-price">
+                    <span>Swap Fee:</span>
+                    <span class="price-highlight">25 Birr</span>
+                </div>
+                <button class="btn-primary btn-full" id="confirmSwapBtn">Confirm Swap</button>
+            </div>
+        </div>
+    </div>
+
     <div class="cart-modal" id="cartModal">
         <div class="cart-content glass-card">
             <div class="cart-header">
@@ -201,17 +254,17 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer glass-card">
         <div class="footer-container">
             <div class="footer-section">
-                <h3>zero.com</h3>
+                <h3>zero</h3>
                 <p>Africa's first hardcover book swapping platform</p>
             </div>
             <div class="footer-section">
                 <h4>Platform</h4>
                 <a href="#explore">Explore</a>
                 <a href="#swap">Swap Books</a>
+                <a href="#shop">Shop New</a>
                 <a href="#community">Community</a>
             </div>
             <div class="footer-section">
@@ -223,10 +276,11 @@
             <div class="footer-section">
                 <h4>Connect</h4>
                 <div class="social-links">
-                    <a href="#" class="social-link">Twitter</a>
-                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">X</a>
+                    <a href="#" class="social-link">Telegram</a>
                     <a href="#" class="social-link">Facebook</a>
                 </div>
+                <div>+251901758052</div>
             </div>
         </div>
         <div class="footer-bottom">
